@@ -1,0 +1,189 @@
+.navbar {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 27px;
+  background: #1A1919;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar__logo {
+  width: 290px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar__menu a {
+  position: relative;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Orbitron", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.navbar__menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 4px;
+  background: #FF4C4C;
+  opacity: 0;
+  bottom: -43px;
+  transition: opacity 0.2s ease;
+}
+
+.navbar__menu a:hover::after { opacity: 1; }
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-btn {
+  width: 121px;
+  height: 43px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover { background: rgba(255,255,255,0.08); }
+
+.register-btn {
+  width: 163px;
+  height: 43px;
+  background: #FF4C4C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover { background: #ff3a3a; }
+
+/* hamburger — hidden by default */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* mobile drawer */
+.navbar__drawer {
+  display: none;
+  flex-direction: column;
+  background: #1A1919;
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  gap: 16px;
+  z-index: 99;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar__drawer.open { display: flex; }
+
+.navbar__drawer a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ===== TABLET (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .navbar__menu { gap: 20px; }
+  .navbar__menu a { font-size: 14px; }
+  .login-btn { width: 100px; }
+  .register-btn { width: 140px; }
+}
+
+/* ===== MOBILE (≤768px) ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .navbar__menu { display: none; }
+
+  .navbar__logo {
+    width: 160px;
+    height: auto;
+  }
+
+  .navbar__hamburger { display: flex; }
+
+  .navbar__drawer { top: 70px; }
+
+  .navbar__actions { gap: 8px; }
+
+  .login-btn {
+    width: 80px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .register-btn {
+    width: 110px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+/* ===== SMALL MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+  .navbar { padding: 0 12px; }
+  .navbar__logo { width: 130px; }
+  .login-btn { width: 68px; font-size: 12px; }
+  .register-btn { width: 96px; font-size: 12px; }
+}

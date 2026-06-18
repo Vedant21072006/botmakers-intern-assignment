@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.la-wrap {
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 40px 32px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  min-height: 520px;
+}
+
+.la-left {
+  flex: 1;
+}
+
+.la-why {
+  color: #e8363a;
+  font-size: 33px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.la-title {
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1.15;
+  margin-bottom: 36px;
+  white-space: nowrap;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.la-items {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.la-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.la-icon-box {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.la-icon-box svg {
+  width: 44px;
+  height: 44px;
+}
+
+.la-item-title {
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.la-item-desc {
+  font-size: 15px;
+  color: #aaaaaa;
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+.la-right {
+  width: 550px;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.la-lb-img {
+  width: 831px;
+  height: 690px;
+  display: block;
+  border-radius: 14px;
+  object-fit: contain;
+}
